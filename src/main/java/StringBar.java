@@ -11,11 +11,11 @@ public class StringBar extends Bar
     @Override
     public void endHappyHour() {happy = false;notifyObservers();}
 
-    public void order(StringDrink drink,StringRecipe recipe) {recipe.mix(drink);}
-
     public void notifyObservers() {
         for (BarObserver obs : observers)
             if (isHappyHour()) obs.happyHourStarted(this);
             else obs.happyHourEnded(this);
     }
+
+    public void order(StringDrink drink,StringRecipe recipe) {recipe.mix(drink);}
 }

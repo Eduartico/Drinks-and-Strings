@@ -1,7 +1,7 @@
 public class StringCaseChanger implements StringTransformer {
     @Override
     public void execute(StringDrink drink) {
-        StringBuilder sb = new StringBuilder("");
+        StringBuilder sb = new StringBuilder();
         char[] ch = drink.getText().toCharArray();
         //String result = "";
         for (int i = 0; i < ch.length; i++) {
